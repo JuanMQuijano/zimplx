@@ -1,7 +1,7 @@
 Archivos complementarios para el uso de gulp con scss, js e imagenes.
 Archivos Complementarios para MVC - PHP.
 
-IMPORTANTE  -- Reemplazar el script inferior en el package.json
+IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carpetas "controllers, views, src"
 
 {
     "scripts": {
