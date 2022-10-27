@@ -41,7 +41,7 @@ class ActiveRecord
     public function guardar()
     {
         $resultado = '';
-        if (!is_null($this->ID)) {
+        if (!is_null($this->id)) {
             // actualizar
             $resultado = $this->actualizar();
         } else {
@@ -182,7 +182,7 @@ class ActiveRecord
     {
         $atributos = [];
         foreach (static::$columnasDB as $columna) {
-            if ($columna === 'ID') continue;
+            if ($columna === 'id') continue;
             $atributos[$columna] = $this->$columna;
         }
         return $atributos;
