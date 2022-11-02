@@ -1,0 +1,15 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor {
+  p {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .formulario {
+    margin-top: 5rem;    
+  }
+}

@@ -3,7 +3,6 @@ Archivos Complementarios para MVC - PHP.
 
 IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carpetas "controllers"
 
-
 {
     "scripts": {
       "dev": "gulp"
@@ -28,22 +27,22 @@ IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carp
       "terser": "^5.3.8"
     }
   }
-  
-  IMPORTANTE  -- Reemplazar el script inferior en el composer.json y crear las carpetas "controllers"
 
-  {
-   "autoload": {
-    "psr-4": {
+ejecutar el comando npm i para la correcta instalación de las dependencias
+npm i * 
+npm install -g npm-check-updates
+  
+IMPORTANTE  -- Reemplazar el script inferior en el composer.json y crear las carpetas "controllers"
+
+{
+  "autoload": {
+   "psr-4": {
       "MVC\\": "./",
       "Controllers\\": "./controllers",
       "Model\\": "./models"
     }
   }
-  }
-
-ejecutar el comando npm i para la correcta instalación de las dependencias
-
-npm install -g npm-check-updates
+}
 
 Despues de ejecutar el Composer
 instalar el composer require vlucas/phpdotenv
