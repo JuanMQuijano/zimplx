@@ -29,6 +29,8 @@ IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carp
     }
   }
   
+  IMPORTANTE  -- Reemplazar el script inferior en el composer.json y crear las carpetas "controllers"
+
   {
    "autoload": {
     "psr-4": {
