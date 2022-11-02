@@ -1,8 +1,8 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->safeLoad(); Uncomment for database
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad(); Uncomment for database
 
 require 'funciones.php';
 require 'database.php';
