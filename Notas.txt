@@ -28,6 +28,16 @@ IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carp
       "terser": "^5.3.8"
     }
   }
+  
+  {
+   "autoload": {
+    "psr-4": {
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Model\\": "./models"
+    }
+  }
+  }
 
 ejecutar el comando npm i para la correcta instalación de las dependencias
 
