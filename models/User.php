@@ -38,6 +38,28 @@ class User extends ActiveRecord
         if (!$this->password) {
             self::$alertas['error'][] = "Debes Ingresar Un Password";
         }
+        if (strlen($this->password) < 6) {
+            self::$alertas['error'][] = "El Password debe tener 6 caracteres o más";
+        }
+
+        if ($this->password !== $this->password2) {
+            self::$alertas['error'][] = "Los Password deben coincidir";
+        }
+
+        return self::$alertas;
+    }
+
+    public function validarEmail()
+    {
+        if (!$this->email) {
+            self::$alertas['error'][] = "Debes Ingresar Un Email";
+        }
+
+        return self::$alertas;
+    }
+
+    public function validarPassword()
+    {
         if (!$this->password) {
             self::$alertas['error'][] = "Debes Ingresar Un Password";
         }
@@ -45,8 +67,16 @@ class User extends ActiveRecord
             self::$alertas['error'][] = "El Password debe tener 6 caracteres o más";
         }
 
-        if ($this->password !== $this->password2) {
-            self::$alertas['error'][] = "Los Password deben coincidir";
+        return self::$alertas;
+    }
+
+    public function validarLogin()
+    {
+        if (!$this->email) {
+            self::$alertas['error'][] = "Debes Ingresar Un Email";
+        }
+        if (!$this->password) {
+            self::$alertas['error'][] = "Debes Ingresar Un Password";
         }
 
         return self::$alertas;

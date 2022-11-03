@@ -1,7 +1,9 @@
 <div class="contenedor">
-    <h1>Fit<span>Camp</span></h1>
-
+    <h1>Fit<span>Camp</span></h1>    
     <div class="contenedor-sm">
+        
+        <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
+
         <form class="formulario" method="POST">
             <div class="campo">
                 <label for="email">Email</label>
