@@ -2,8 +2,7 @@
 @use 'base/mixins' as m;
 
 .mensaje {
-    .alerta {
-      margin-top: 15rem;
+    .alerta {      
       padding: 2rem;
       text-align: center;
     }

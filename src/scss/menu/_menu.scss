@@ -1,0 +1,83 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.menu {
+  .acciones {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include m.tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    h1 {
+      @include m.textoDegradado(#f4f6f7);
+
+      @include m.tablet {
+        font-size: 4rem;
+      }
+    }
+
+    a {
+      border-radius: 0.3rem;      
+      padding: 1rem 2rem 1rem;
+      font-size: 3rem;
+      margin-bottom: 0;
+      transition-property: background;
+      transition-duration: 500ms;
+
+      &:hover {
+        text-decoration: none;
+        background: v.$verdeVivo;
+      }
+    }
+  }
+
+  .contenedor {
+    max-width: 95%;
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        border-radius: 0.3rem;
+        padding: 1rem 2rem 1rem;
+        font-size: 2.5rem;
+        color: #fff;
+        transition-property: background;
+        transition-duration: 500ms;
+        
+        &:hover {
+          background: v.$verdeVivo;
+        }
+      }
+      border-bottom: gray solid 0.2rem; 
+    }
+
+    .contenedor-sm {
+      margin-top: 7rem;
+      max-width: inherit;
+
+      h1 {
+        padding: 1rem;
+        border-top: 0.2rem solid rgb(45, 170, 128);
+        border-bottom: rgb(45, 170, 128) solid 0.2rem;
+        @include m.textoDegradado(#f4f6f7);
+
+        @include m.tablet {
+          font-size: 3rem;
+        }
+      }
+
+      .ejercicios{
+        width: 80%;
+        margin: 0 auto;
+        background-color: red;
+      }
+    }
+  }
+}

@@ -16,7 +16,18 @@ function s($html): string
 }
 
 //Funcion que revisa que el usuario este autenticado
-function isAuth(): void
+function isLogged(): void
+{
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    if (isset($_SESSION['login'])) {
+        header('Location: /menu');
+    }
+}
+
+function isNotLogged(): void
 {
     if (!isset($_SESSION)) {
         session_start();
@@ -26,6 +37,7 @@ function isAuth(): void
         header('Location: /');
     }
 }
+
 
 function isAdmin(): void
 {

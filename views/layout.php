@@ -12,13 +12,8 @@
 </head>
 
 <body>
-
     <?php echo $contenido; ?>
     <?php echo $script ?? ''; ?>
-
-    <footer>
-        <p>Developed by Juan <span>Quijano</span></p>
-    </footer>
 </body>
 
 </html>

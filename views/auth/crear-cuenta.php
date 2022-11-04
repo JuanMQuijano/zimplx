@@ -1,4 +1,4 @@
-<div class="contenedor">
+<div class="contenedor crear">
     <h1>Fit<span>Camp</span></h1>
 
     <div class="contenedor-sm">

@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\LoginController;
+use Controllers\MenuController;
 use MVC\Router;
 
 $router = new Router();
@@ -24,6 +25,11 @@ $router->get('/reestablecer', [LoginController::class, 'reestablecer']);
 $router->post('/reestablecer', [LoginController::class, 'reestablecer']);
 
 $router->get('/mensaje', [LoginController::class, 'mensaje']);
+
+$router->get('/cerrar-sesion', [LoginController::class, 'cerrar_sesion']);
+
+//Menú
+$router->get('/menu', [MenuController::class, 'index']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

@@ -11,6 +11,8 @@ class LoginController
 
     public static function index(Router $router)
     {
+        isLogged();
+
         $alertas = [];
         $auth = new User();
 
@@ -32,6 +34,10 @@ class LoginController
                         if (!$passwordVerify) {
                             User::setAlerta('error', 'Contraseña Incorrecta');
                         } else {
+                            session_start();
+                            $_SESSION['nombre'] = $user->nombre;
+                            $_SESSION['login'] = true;
+
                             header('Location: /menu');
                         }
                     } else {
@@ -50,6 +56,8 @@ class LoginController
 
     public static function crear_cuenta(Router $router)
     {
+        isLogged();
+        
         $alertas = [];
         $usuario = new User();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -90,6 +98,7 @@ class LoginController
 
     public static function confirmar(Router $router)
     {
+        isLogged();
         $alertas = [];
         $token = $_GET['token'];
         $confirmado = false;
@@ -119,6 +128,8 @@ class LoginController
 
     public static function olvide(Router $router)
     {
+        isLogged();
+
         $alertas = [];
         $recover = new User();
 
@@ -154,6 +165,7 @@ class LoginController
 
     public static function reestablecer(Router $router)
     {
+        isLogged();
         $alertas = [];
         $token = $_GET['token'];
         $valido = false;
@@ -193,6 +205,14 @@ class LoginController
 
     public static function mensaje(Router $router)
     {
+        isLogged();
         $router->render('auth/mensaje');
+    }
+
+    public static function cerrar_sesion()
+    {
+        $_SESSION = [];
+
+        header('Location: /');
     }
 }
