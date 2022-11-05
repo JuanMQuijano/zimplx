@@ -1,8 +1,8 @@
 <div class="menu">
     <div class="acciones">
-        <a href=""><img src="/build/img/user.webp" alt=""></a>
+        <a href=""><img src="/build/img/user.webp" alt="Perfil Icono"></a>
         <h1>Menú Principal</h1>
-        <a href="/cerrar-sesion"><img src="/build/img/cerrar-sesion.webp" alt=""></a>
+        <a href="/cerrar-sesion"><img src="/build/img/cerrar-sesion.webp" alt="Cerrar Sesión Icono"></a>
     </div>
 
     <div class="contenedor">
