@@ -1,8 +1,8 @@
 <div class="menu">
     <div class="acciones">
-        <a href="">Perfil</a>
+        <a href=""><img src="/build/img/user.webp" alt=""></a>
         <h1>Menú Principal</h1>
-        <a href="/cerrar-sesion">Cerrar Sesión</a>
+        <a href="/cerrar-sesion"><img src="/build/img/cerrar-sesion.webp" alt=""></a>
     </div>
 
     <div class="contenedor">
@@ -14,9 +14,14 @@
         </nav>
 
         <div class="contenedor-sm">
-            <h1>Ejercicios Recomendados</h1>
-
             <div class="ejercicios">
+                <div class="ejercicio">
+                    <h3>Video 1</h3>
+                    <video controls src="/build/img/videoplayback.mp4"></video>
+                </div>
+                <div class="ejercicio">
+                    asd
+                </div>
                 <div class="ejercicio">
                     asd
                 </div>
