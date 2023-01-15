@@ -1,5 +1,7 @@
 <?php
 
+define('CARPETA_IMAGENES', __DIR__ . '/../public/imagenes/');
+
 function debuguear($variable): string
 {
     echo "<pre>";
@@ -23,7 +25,7 @@ function isLogged(): void
     }
 
     if (isset($_SESSION['login'])) {
-        header('Location: /menu');
+        header('Location: /admin');
     }
 }
 
@@ -34,14 +36,6 @@ function isNotLogged(): void
     }
 
     if (!isset($_SESSION['login'])) {
-        header('Location: /');
-    }
-}
-
-
-function isAdmin(): void
-{
-    if (!isset($_SESSION['admin'])) {
         header('Location: /');
     }
 }

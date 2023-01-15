@@ -63,7 +63,7 @@ class ActiveRecord
     // Busca un registro por su id
     public static function find($id)
     {
-        $query = "SELECT * FROM " . static::$tabla  . " WHERE id = ${id}";
+        $query = "SELECT * FROM " . static::$tabla  . " WHERE id = {$id}";
 
         $resultado = self::consultarSQL($query);
 
@@ -72,7 +72,7 @@ class ActiveRecord
 
     public static function where($columna, $valor)
     {
-        $query = "SELECT * FROM " . static::$tabla  . " WHERE ${columna} = '${valor}'";
+        $query = "SELECT * FROM " . static::$tabla  . " WHERE {$columna} = '{$valor}'";
 
         $resultado = self::consultarSQL($query);
 
@@ -81,7 +81,7 @@ class ActiveRecord
 
     public static function get($limite)
     {
-        $query = "SELECT * FROM " . static::$tabla . " LIMIT ${limite}";
+        $query = "SELECT * FROM " . static::$tabla . " LIMIT {$limite}";
 
         $resultado = self::consultarSQL($query);
 
@@ -216,7 +216,7 @@ class ActiveRecord
         }
         // Asignar al atributo de imagen el nombre de la imagen
         if ($imagen) {
-            $this->imagen = $imagen;
+            $this->image = $imagen;
         }
     }
 
@@ -224,9 +224,11 @@ class ActiveRecord
     public function borrarImagen()
     {
         //Comprobar si existe el archivo
-        // $existeArchivo = file_exists(CARPETA_IMAGENES . $this->imagen);
-        // if ($existeArchivo) {
-        //     unlink(CARPETA_IMAGENES . $this->imagen);
-        // }
+        if (isset($this->image)) {
+            $existeArchivo = file_exists(CARPETA_IMAGENES . $this->image . ".webp");
+            if ($existeArchivo) {
+                unlink(CARPETA_IMAGENES . $this->image . ".webp");
+            }
+        }
     }
 }

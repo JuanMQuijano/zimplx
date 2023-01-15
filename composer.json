@@ -1,6 +1,6 @@
 {
-  "name": "juan_q/fit-camp",
-  "description": "FitCamp Project",
+  "name": "juan_q/zimple",
+  "description": "Zimple Project",
   "type": "project",
   "autoload": {
     "psr-4": {
@@ -17,6 +17,7 @@
   ],
   "require": {
     "vlucas/phpdotenv": "^5.5",
-    "phpmailer/phpmailer": "^6.6"
+    "phpmailer/phpmailer": "^6.6",
+    "intervention/image": "^2.7"
   }
 }

@@ -5,32 +5,32 @@ namespace Model;
 class User extends ActiveRecord
 {
     protected static $tabla = "users";
-    protected static $columnasDB = ["id", "nombre", "apellido", "fechan", "email", "password", "token", "confirmado", "tipo"];
+    protected static $columnasDB = ["id", "name", "lastname", "email", "password"];
+
+    public $id;
+    public $name;
+    public $lastname;
+    public $email;
+    public $password;
+    public $password2;
 
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
-        $this->nombre = $args['nombre'] ?? '';
-        $this->apellido = $args['apellido'] ?? '';
-        $this->fechan = $args['fechan'] ?? '';
+        $this->name = $args['name'] ?? '';
+        $this->lastname = $args['lastname'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
-        $this->token = $args['token'] ?? '';
-        $this->confirmado = $args['confirmado'] ?? 0;
-        $this->tipo = $args['tipo'] ?? 0;
     }
 
     public function validar()
     {
-        if (!$this->nombre) {
+        if (!$this->name) {
             self::$alertas['error'][] = "Debes Ingresar Un Nombre";
         }
-        if (!$this->apellido) {
+        if (!$this->lastname) {
             self::$alertas['error'][] = "Debes Ingresar Un Apellido";
-        }
-        if (!$this->fechan) {
-            self::$alertas['error'][] = "Debes Seleccionar Una Fecha de Nacimiento";
         }
         if (!$this->email) {
             self::$alertas['error'][] = "Debes Ingresar Un Email";
@@ -85,10 +85,5 @@ class User extends ActiveRecord
     public function hashearPassword()
     {
         $this->password = password_hash($this->password, PASSWORD_BCRYPT);
-    }
-
-    public function generarToken()
-    {
-        $this->token = uniqid();
     }
 }

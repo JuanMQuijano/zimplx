@@ -2,34 +2,33 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\AdminController;
 use Controllers\LoginController;
-use Controllers\MenuController;
+use Controllers\ProductoController;
+use Controllers\RegisterController;
 use MVC\Router;
 
 $router = new Router();
 
 //Auth
-$router->get('/', [LoginController::class, 'index']);
-$router->post('/', [LoginController::class, 'index']);
+$router->get('/login', [LoginController::class, 'index']);
+$router->post('/login', [LoginController::class, 'index']);
 
-$router->get('/crear-cuenta', [LoginController::class, 'crear_cuenta']);
-$router->post('/crear-cuenta', [LoginController::class, 'crear_cuenta']);
+$router->get('/register', [RegisterController::class, 'index']);
+$router->post('/register', [RegisterController::class, 'index']);
 
-$router->get('/confirmar', [LoginController::class, 'confirmar']);
-$router->post('/confirmar', [LoginController::class, 'confirmar']);
+$router->get('/logout', [LoginController::class, 'logout']);
 
-$router->get('/olvide', [LoginController::class, 'olvide']);
-$router->post('/olvide', [LoginController::class, 'olvide']);
+//Admin Section
+$router->get('/admin', [AdminController::class, 'index']);
 
-$router->get('/reestablecer', [LoginController::class, 'reestablecer']);
-$router->post('/reestablecer', [LoginController::class, 'reestablecer']);
+$router->get('/admin/crear', [ProductoController::class, 'index']);
+$router->post('/admin/crear', [ProductoController::class, 'index']);
 
-$router->get('/mensaje', [LoginController::class, 'mensaje']);
-
-$router->get('/cerrar-sesion', [LoginController::class, 'cerrar_sesion']);
+$router->post('/admin/eliminar', [ProductoController::class, 'eliminar']);
 
 //Menú
-$router->get('/menu', [MenuController::class, 'index']);
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

@@ -1,0 +1,12 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+
+  &__product {
+    box-shadow: 18px 7px 14px -4px rgba(0,0,0,0.1);
+  }
+}

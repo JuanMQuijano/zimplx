@@ -44,7 +44,7 @@
   text-align: center;
   display: block;
   width: 100%;
-  
+
   @include tablet {
     width: auto;
   }
@@ -55,9 +55,7 @@
 }
 
 @mixin textoDegradado($color) {
-  background: linear-gradient(to right, $color 0%, lighten($color, 30%) 100%);
-  color: transparent;
-  background-clip: text;
+  color: $color;
   text-align: center;
   font-size: 7rem;
 
