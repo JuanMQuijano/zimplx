@@ -8,6 +8,7 @@ name VARCHAR(60),
 lastname VARCHAR(60),
 email VARCHAR(60),
 password VARCHAR(60),
+tipo tinyint,
 
 PRIMARY KEY(id));
 
@@ -16,6 +17,7 @@ CREATE TABLE products(
 id INT NOT NULL AUTO_INCREMENT, 
 name VARCHAR(60),
 description VARCHAR(100),
+type VARCHAR(25),
 image LONGBLOB,
 price INT,
 quantity INT,
@@ -25,17 +27,23 @@ PRIMARY KEY(id));
 CREATE TABLE cart(
 id INT NOT NULL AUTO_INCREMENT, 
 idProduct INT,
-idSession VARCHAR(60),
-quantity INT,
+idUser INT,
+
+FOREIGN KEY(idProduct) REFERENCES products(id) ON DELETE SET NULL ON UPDATE SET NULL,
+FOREIGN KEY(idUser) REFERENCES users(id) ON DELETE SET NULL ON UPDATE SET NULL,
 
 PRIMARY KEY(id));
 
 CREATE TABLE sales(
 id INT NOT NULL AUTO_INCREMENT,
+idUser INT,
 idProduct_Car INT, 
 address VARCHAR(60),
 phone VARCHAR(10),
+price INT,
+total_price INT,
 date DATE,
+status VARCHAR(20)
 
 PRIMARY KEY(id),
 FOREIGN KEY(idProduct_Car) REFERENCES products(id) ON DELETE SET NULL ON UPDATE SET NULL

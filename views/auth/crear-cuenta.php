@@ -1,6 +1,5 @@
-<div class="contenedor crear">
+<div class="contenedor crear login">
     <h1>Zimple</h1>
-
     <div class="contenedor-sm">
         <p>¡Hola! Vamos a crear tu cuenta en Zimple</p>
 
@@ -9,17 +8,17 @@
         <form class="formulario" method="POST">
             <div class="campo">
                 <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" value="<?php echo $usuario->name; ?>" placeholder="Ingresa Tu Nombre">
+                <input type="text" id="name" name="name" value="<?php echo s($usuario->name); ?>" placeholder="Ingresa Tu Nombre">
             </div>
 
             <div class="campo">
                 <label for="lastname">Apellido</label>
-                <input type="text" id="lastname" name="lastname" value="<?php echo $usuario->lastname; ?>" placeholder="Ingresa Tu Apellido">
+                <input type="text" id="lastname" name="lastname" value="<?php echo s($usuario->lastname); ?>" placeholder="Ingresa Tu Apellido">
             </div>
 
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<?php echo $usuario->email; ?>" placeholder="Ingresa Tu Email">
+                <input type="email" id="email" name="email" value="<?php echo s($usuario->email); ?>" placeholder="Ingresa Tu Email">
             </div>
 
             <div class="campo">

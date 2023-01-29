@@ -23,7 +23,7 @@ class Router
         session_start();
 
         // Arreglo de rutas protegidas...        
-        $rutas_protegidas = ['/admin', '/admin/crear', '/admin/ventas'];
+        $rutas_protegidas = ['/admin', '/admin/crear', '/admin/actualizar', '/admin/eliminar', '/admin/ventas', '/admin/products', '/admin/entregar'];
 
         $isAdmin = $_SESSION['admin'] ?? null;
 

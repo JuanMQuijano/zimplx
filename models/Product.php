@@ -6,11 +6,12 @@ class Product extends ActiveRecord
 {
 
     protected static $tabla = "products";
-    protected static $columnasDB = ["id", "name", "description", "image", "price", "quantity"];
+    protected static $columnasDB = ["id", "name", "description", "type", "image", "price", "quantity"];
 
     public $id;
     public $name;
     public $description;
+    public $type;
     public $image;
     public $price;
     public $quantity;
@@ -20,6 +21,7 @@ class Product extends ActiveRecord
         $this->id = $args['id'] ?? null;
         $this->name = $args['name'] ?? '';
         $this->description = $args['description'] ?? '';
+        $this->type = $args['type'] ?? '';
         $this->image = $args['image'] ?? '';
         $this->price = $args['price'] ?? '';
         $this->quantity = $args['quantity'] ?? '';
@@ -32,6 +34,9 @@ class Product extends ActiveRecord
         }
         if (!$this->description) {
             self::$alertas['error'][] = 'Debes ingresar una descripcion';
+        }
+        if (!$this->type) {
+            self::$alertas['error'][] = 'Debes seleccionar un tipo de producto';
         }
         if (!$this->image) {
             self::$alertas['error'][] = 'Debes ingresar una imagen';

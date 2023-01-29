@@ -1,12 +1,25 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+.admin {
+  h1 {
+    font-size: 4.5rem;
+    margin: 5rem 0;
+  }
+}
 
-  &__product {
-    box-shadow: 18px 7px 14px -4px rgba(0,0,0,0.1);
+.inicio__product {
+  &-mensaje {
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: normal;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 0.5rem;
+  }
+
+  &--btnBorrar {
+    @include m.boton(red, white);
   }
 }

@@ -24,7 +24,7 @@ class RegisterController
 
                 if (!$resultado) {
                     $usuario->hashearPassword();
-
+            
                     $resultado = $usuario->guardar();
 
                     if ($resultado) {
@@ -38,7 +38,7 @@ class RegisterController
 
         $alertas = User::getAlertas();
         $router->render('auth/crear-cuenta', [
-            'titulo' => 'Crear Cuenta',
+            'titulo' => 'Registrarme',
             'alertas' => $alertas,
             'usuario' => $usuario
         ]);

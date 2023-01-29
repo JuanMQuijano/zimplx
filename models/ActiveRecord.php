@@ -79,6 +79,15 @@ class ActiveRecord
         return array_shift($resultado);
     }
 
+    public static function where_all($columna, $valor)
+    {
+        $query = "SELECT * FROM " . static::$tabla  . " WHERE {$columna} = '{$valor}'";
+
+        $resultado = self::consultarSQL($query);
+
+        return $resultado;
+    }
+
     public static function get($limite)
     {
         $query = "SELECT * FROM " . static::$tabla . " LIMIT {$limite}";
@@ -164,6 +173,14 @@ class ActiveRecord
         return $array;
     }
 
+    //Consulta Plana de SQL, utilizar cuando los métodos del modelo no son sufiente
+    public static function SQL($consulta)
+    {
+        $query = $consulta;
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     protected static function crearObjeto($registro)
     {
         $objeto = new static;
@@ -211,7 +228,7 @@ class ActiveRecord
     public function setImagen($imagen)
     {
         // Elimina la imagen previa
-        if (!is_null($this->id)) {
+        if (!is_null($this->id)) {            
             $this->borrarImagen();
         }
         // Asignar al atributo de imagen el nombre de la imagen
@@ -226,7 +243,7 @@ class ActiveRecord
         //Comprobar si existe el archivo
         if (isset($this->image)) {
             $existeArchivo = file_exists(CARPETA_IMAGENES . $this->image . ".webp");
-            if ($existeArchivo) {
+            if ($existeArchivo) {                
                 unlink(CARPETA_IMAGENES . $this->image . ".webp");
             }
         }

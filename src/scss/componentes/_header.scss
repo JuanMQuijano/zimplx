@@ -2,25 +2,34 @@
 @use "base/mixins" as m;
 
 .header {
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
+  background: rgb(0, 0, 0);
 
   @include m.tablet {
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  @include m.desktop {
+    flex-direction: row;
   }
 
   &__formater {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
+
+    a {
+      color: white;
+    }
   }
 
   &__logout,
   &__close {
     width: 40px;
     width: 40px;
+    color: white;
   }
 
   &__close {
@@ -32,11 +41,11 @@
   &__nav-bar {
     display: none;
     flex-direction: column;
-
     a {
       font-size: 2rem;
       text-align: center;
       margin: 0.5rem auto;
+      color: white;
     }
 
     @include m.tablet {

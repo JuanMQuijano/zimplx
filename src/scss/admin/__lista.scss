@@ -1,0 +1,36 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.lista__productos {  
+  display: grid;
+  gap: 2rem;
+
+  @include m.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  @include m.desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--pedido {
+    &-entregado {
+      background-color: rgba(67, 198, 86, 0.851);
+    }
+    background-color: v.$azul;
+    list-style: none;
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    &-total {
+      font-weight: bold;
+    }
+  }
+}
+
+.boton-entregado {
+  @include m.boton(rgba(67, 198, 86, 0.851), #fff);
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}

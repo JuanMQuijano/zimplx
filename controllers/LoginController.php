@@ -33,11 +33,17 @@ class LoginController
                         User::setAlerta('error', 'Contraseña Incorrecta');
                     } else {
                         session_start();
-                        $_SESSION['nombre'] = $user->nombre;
+                        $_SESSION['id'] = $user->id;
+                        $_SESSION['nombre'] = $user->name . " " . $user->lastname;
+                        $_SESSION['email'] = $user->email;
                         $_SESSION['login'] = true;
-                        $_SESSION['admin'] = true;
 
-                        header('Location: /admin');
+                        if ($user->tipo === "1") {
+                            $_SESSION['admin'] = true;
+                            header('Location: /admin');
+                        } else {
+                            header('Location: /');
+                        }
                     }
                 }
             }
@@ -46,7 +52,8 @@ class LoginController
         $alertas = User::getAlertas();
         $router->render('auth/index', [
             'titulo' => 'Iniciar Sesión',
-            'alertas' => $alertas
+            'alertas' => $alertas,
+            'auth' => $auth
         ]);
     }
 
