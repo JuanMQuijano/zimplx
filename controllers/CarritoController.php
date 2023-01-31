@@ -26,6 +26,9 @@ class CarritoController
             if ($product->type === "ron") {
                 $products_format['ron'][] = $product;
             }
+            if ($product->type === "smirnoff") {
+                $products_format['smirnoff'][] = $product;
+            }
         }
         $alertas = [];
 
