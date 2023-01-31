@@ -1,11 +1,11 @@
-<div class="contenedor crear login">
+<div class="contenedor login">
     <h1>Zimple</h1>
     <div class="contenedor-sm">
         <p>¡Hola! Vamos a crear tu cuenta en Zimple</p>
 
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-        <form class="formulario" method="POST">
+        <form class="login__formulario" method="POST">
             <div class="campo">
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" value="<?php echo s($usuario->name); ?>" placeholder="Ingresa Tu Nombre">

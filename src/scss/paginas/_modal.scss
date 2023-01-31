@@ -10,8 +10,8 @@
   bottom: 0;
 
   &__formulario {
-    background-color: #FFF;
-    border-radius: 0.5rem;    
+    background-color: #fff;
+    border-radius: 0.5rem;
     width: 100%;
     margin: 20rem auto;
     padding: 2rem 0;
@@ -83,12 +83,12 @@
       margin: 1rem auto;
 
       .submit {
-        @include m.boton(#000, #FFF);
+        @include m.boton(#000, #fff);
       }
 
       .cerrar-modal {
         margin-top: 1rem;
-        @include m.boton(v.$rojo, #FFF);
+        @include m.boton(v.$rojo, #fff);
       }
     }
 

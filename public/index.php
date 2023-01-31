@@ -2,14 +2,15 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use MVC\Router;
 use Controllers\AdminController;
-use Controllers\APICarritoController;
 use Controllers\LoginController;
 use Controllers\CarritoController;
 use Controllers\PaginasController;
+use Controllers\ContactoController;
 use Controllers\ProductoController;
 use Controllers\RegisterController;
-use MVC\Router;
+use Controllers\APICarritoController;
 
 $router = new Router();
 
