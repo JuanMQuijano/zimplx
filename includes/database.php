@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+$db = mysqli_connect('portafolio-juanquijano.online', 'u425383455_juan', 'Juanma20', 'u425383455_zimplx');
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
