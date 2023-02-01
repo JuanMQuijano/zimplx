@@ -1,9 +1,9 @@
+src/
+package.json/
+gulpfile.js/
+Notas.txt/
+BD.txt/
 node_modules/
 vendor/
 package-lock.json
 composer.lock
-src
-package.json
-gulpfile.js
-Notas.txt
-BD.txt
