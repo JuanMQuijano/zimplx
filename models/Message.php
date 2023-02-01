@@ -4,7 +4,7 @@ namespace Model;
 
 class Message extends ActiveRecord
 {
-    protected static $tabla = "message";
+    protected static $tabla = "messages";
     protected static $columnasDB = ["id", "name", "lastname", "email", "message"];
 
     public $id;
