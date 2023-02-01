@@ -17,6 +17,7 @@
 
     label {
       color: v.$negro;
+      font-weight: bold;
 
       @include m.tablet {
         flex: 0 0 10rem;
