@@ -6,7 +6,7 @@
         <p>¡Hola! Inicia Sesión en Zimple</p>
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-        <form class="formulario login__formulario" method="POST">
+        <form class="formulario " method="POST">
             <div class="campo">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Tu Email" value="<?php echo s($auth->email); ?>">

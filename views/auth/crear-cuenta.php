@@ -5,7 +5,7 @@
 
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-        <form class="formulario login__formulario" method="POST">
+        <form class="formulario" method="POST">
             <div class="campo">
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" value="<?php echo s($usuario->name); ?>" placeholder="Ingresa Tu Nombre">

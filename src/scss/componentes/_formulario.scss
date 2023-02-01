@@ -3,9 +3,11 @@
 
 .formulario {  
   width: 70%;
+
   @include m.tablet {
     width: 100%;
   }
+  
   margin: 0 auto;  
   margin-top: 5rem;
 
