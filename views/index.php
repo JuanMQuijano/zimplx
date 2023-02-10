@@ -27,11 +27,13 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
+                            <p> <?php echo $product->description; ?></p>
+                            <br>
                             <?php if ($product->quantity === "0") { ?>
-                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                                <hr>
+                                <h1>Producto Agotado</h1>
+                                <hr>
                             <?php } else { ?>
-                                <p> <?php echo $product->description; ?></p>
-                                <br>
                                 <h2>$<?php echo $product->price; ?></h2>
                                 <form method="POST">
                                     <input type="hidden" name="id" value="<?php echo $product->id; ?>">
@@ -64,11 +66,13 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
+                            <p> <?php echo $product->description; ?></p>
+                            <br>
                             <?php if ($product->quantity === "0") { ?>
-                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                                <hr>
+                                <h1>Producto Agotado</h1>
+                                <hr>
                             <?php } else { ?>
-                                <p> <?php echo $product->description; ?></p>
-                                <br>
                                 <h2>$<?php echo $product->price; ?></h2>
                                 <form method="POST">
                                     <input type="hidden" name="id" value="<?php echo $product->id; ?>">
@@ -102,11 +106,13 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
+                            <p> <?php echo $product->description; ?></p>
+                            <br>
                             <?php if ($product->quantity === "0") { ?>
-                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                                <hr>
+                                <h1>Producto Agotado</h1>
+                                <hr>
                             <?php } else { ?>
-                                <p> <?php echo $product->description; ?></p>
-                                <br>
                                 <h2>$<?php echo $product->price; ?></h2>
                                 <form method="POST">
                                     <input type="hidden" name="id" value="<?php echo $product->id; ?>">
@@ -139,11 +145,13 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
+                            <p> <?php echo $product->description; ?></p>
+                            <br>
                             <?php if ($product->quantity === "0") { ?>
-                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                                <hr>
+                                <h1>Producto Agotado</h1>
+                                <hr>
                             <?php } else { ?>
-                                <p> <?php echo $product->description; ?></p>
-                                <br>
                                 <h2>$<?php echo $product->price; ?></h2>
                                 <form method="POST">
                                     <input type="hidden" name="id" value="<?php echo $product->id; ?>">
