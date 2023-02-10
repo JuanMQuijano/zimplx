@@ -17,16 +17,16 @@ class PaginasController
         $products = Product::all();
 
         foreach ($products as $product) {
-            if ($product->type === "cerveza" && $product->quantity !== "0") {
+            if ($product->type === "cerveza") {
                 $products_format['cervezas'][] = $product;
             }
-            if ($product->type === "aguardiente" && $product->quantity !== "0") {
+            if ($product->type === "aguardiente") {
                 $products_format['aguardiente'][] = $product;
             }
-            if ($product->type === "ron" && $product->quantity !== "0") {
+            if ($product->type === "ron") {
                 $products_format['ron'][] = $product;
             }
-            if ($product->type === "smirnoff" && $product->quantity !== "0") {
+            if ($product->type === "smirnoff") {
                 $products_format['smirnoff'][] = $product;
             }
         }
