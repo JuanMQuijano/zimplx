@@ -21,26 +21,29 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <?php if (isset($products['cervezas'])) {
-                    foreach ($products['cervezas'] as $product) { ?>
+                    foreach ($products['cervezas'] as $product) {
+                ?>
                         <div class="inicio__product swiper-slide">
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
-                            <p> <?php echo $product->description; ?></p>
-                            <br>
-                            <h2>$<?php echo $product->price; ?></h2>
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                <button type="submit" class="inicio__product-btn">
-                                    Agregar al Carrito
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
-                            </form>
+                            <?php if ($product->quantity === "0") { ?>
+                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                            <?php } else { ?>
+                                <p> <?php echo $product->description; ?></p>
+                                <br>
+                                <h2>$<?php echo $product->price; ?></h2>
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                                    <button type="submit" class="inicio__product-btn">
+                                        Agregar al Carrito
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </form>
+                            <?php } ?>
                         </div>
-                    <?php }
-                } else { ?>
-                    <h3 class="inicio__product-mensaje">Producto Agotado</h3>
-                <?php } ?>
+                <?php }
+                } ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -61,21 +64,23 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
-                            <p> <?php echo $product->description; ?></p>
-                            <br>
-                            <h2>$<?php echo $product->price; ?></h2>
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                <button type="submit" class="inicio__product-btn">
-                                    Agregar al Carrito
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
-                            </form>
+                            <?php if ($product->quantity === "0") { ?>
+                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                            <?php } else { ?>
+                                <p> <?php echo $product->description; ?></p>
+                                <br>
+                                <h2>$<?php echo $product->price; ?></h2>
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                                    <button type="submit" class="inicio__product-btn">
+                                        Agregar al Carrito
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </form>
+                            <?php } ?>
                         </div>
-                    <?php }
-                } else { ?>
-                    <h3 class="inicio__product-mensaje">Producto Agotado</h3>
-                <?php } ?>
+                <?php }
+                } ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -91,26 +96,29 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <?php if (isset($products['ron'])) {
-                    foreach ($products['ron'] as $product) { ?>
+                    foreach ($products['ron'] as $product) {
+                ?>
                         <div class="inicio__product swiper-slide">
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
-                            <p> <?php echo $product->description; ?></p>
-                            <br>
-                            <h2>$<?php echo $product->price; ?></h2>
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                <button type="submit" class="inicio__product-btn">
-                                    Agregar al Carrito
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
-                            </form>
+                            <?php if ($product->quantity === "0") { ?>
+                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                            <?php } else { ?>
+                                <p> <?php echo $product->description; ?></p>
+                                <br>
+                                <h2>$<?php echo $product->price; ?></h2>
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                                    <button type="submit" class="inicio__product-btn">
+                                        Agregar al Carrito
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </form>
+                            <?php } ?>
                         </div>
-                    <?php }
-                } else { ?>
-                    <h3 class="inicio__product-mensaje">Producto Agotado</h3>
-                <?php } ?>
+                <?php }
+                } ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -131,21 +139,23 @@
                             <img src="/imagenes/<?php echo $product->image; ?>.webp" alt="Imagen Producto">
                             <h1> <?php echo $product->name; ?></h1>
                             <br>
-                            <p> <?php echo $product->description; ?></p>
-                            <br>
-                            <h2>$<?php echo $product->price; ?></h2>
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                <button type="submit" class="inicio__product-btn">
-                                    Agregar al Carrito
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
-                            </form>
+                            <?php if ($product->quantity === "0") { ?>
+                                <h3 class="inicio__product-mensaje">Producto Agotado</h3>
+                            <?php } else { ?>
+                                <p> <?php echo $product->description; ?></p>
+                                <br>
+                                <h2>$<?php echo $product->price; ?></h2>
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                                    <button type="submit" class="inicio__product-btn">
+                                        Agregar al Carrito
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </form>
+                            <?php } ?>
                         </div>
-                    <?php }
-                } else { ?>
-                    <h3 class="inicio__product-mensaje">Producto Agotado</h3>
-                <?php } ?>
+                <?php }
+                } ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
