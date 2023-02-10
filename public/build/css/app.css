@@ -823,6 +823,11 @@ footer nav p {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1rem;
+  -webkit-transition: background 1000ms ease;
+  -moz-transition: background 1000ms ease;
+  -ms-transition: background 1000ms ease;
+  -o-transition: background 1000ms ease;
+  transition: background 1000ms ease;
 }
 @media (min-width: 768px) {
   .inicio__product-btn {
