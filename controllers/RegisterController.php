@@ -23,8 +23,7 @@ class RegisterController
                 $resultado = User::where('email', $usuario->email);
 
                 if (!$resultado) {
-                    $usuario->hashearPassword();
-            
+                    $usuario->hashearPassword();                    
                     $resultado = $usuario->guardar();
 
                     if ($resultado) {

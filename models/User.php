@@ -2,10 +2,12 @@
 
 namespace Model;
 
+use Model\ActiveRecord;
+
 class User extends ActiveRecord
 {
     protected static $tabla = "users";
-    protected static $columnasDB = ["id", "name", "lastname", "email", "password", "tipo", "date"];
+    protected static $columnasDB = ["id", "name", "lastname", "email", "password", "tipo", "register_date"];
 
     public $id;
     public $name;
@@ -14,7 +16,7 @@ class User extends ActiveRecord
     public $password;
     public $password2;
     public $tipo;
-    public $date;
+    public $register_date;
 
     public function __construct($args = [])
     {
@@ -25,7 +27,7 @@ class User extends ActiveRecord
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
         $this->tipo = 0;
-        $this->date = date('Y-M-D');
+        $this->register_date = Date('Y-m-d');
     }
 
     public function validar()
