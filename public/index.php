@@ -52,6 +52,9 @@ $router->post('/admin/entregar', [AdminController::class, 'entregar']);
 
 //API
 $router->get('/api/carrito', [APICarritoController::class, 'index']);
+$router->post('/api/carrito/agregar', [APICarritoController::class, 'add']);
 $router->post('/api/carrito/crear', [APICarritoController::class, 'crear']);
+
+
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

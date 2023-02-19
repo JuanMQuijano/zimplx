@@ -1,9 +1,9 @@
 <div class="contenedor login">
 
-    <h1>Zimple</h1>
+    <h1>Zimplx</h1>
 
     <div class="contenedor-sm">
-        <p>¡Hola! Inicia Sesión en Zimple</p>
+        <p>¡Hola! Inicia Sesión en Zimplx</p>
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
         <form class="formulario " method="POST">

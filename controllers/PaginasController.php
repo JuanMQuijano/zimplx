@@ -44,25 +44,24 @@ class PaginasController
         $alertas = [];
         $mostrar = false;
         $products_cart = [];
-        if (!isset($_SESSION['id'])) {
-            $alertas = User::setAlerta('error', 'Debes iniciar sesión');
-        } else {
-            $products_cart = ProductCart::select($_SESSION['id']);
 
-            if (!$products_cart) {
-                $mostrar = false;
-                $alertas = User::setAlerta('error', 'Aún no tienes productos en el carrito');
-            } else {
-                $mostrar = true;
-            }
+        $products_cart = ProductCart::select(session_id());
+
+        if (!$products_cart) {
+            $mostrar = false;
+            $alertas = User::setAlerta('error', 'Aún no tienes productos en el carrito');
+        } else {
+            $mostrar = true;
         }
+
 
         $alertas = User::getAlertas();
         $router->render('paginas/carrito', [
-            'titulo' => 'Inicio',
+            'titulo' => 'Carrito',
             'mostrar' => $mostrar,
             'products_cart' => $products_cart,
-            'alertas' => $alertas
+            'alertas' => $alertas,
+            'id' => session_id()
         ]);
     }
 }

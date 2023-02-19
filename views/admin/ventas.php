@@ -27,13 +27,11 @@
         <ul class="lista__productos ">
             <?php
             $idUser = 0;
-            $arrayId = [];
             $totalVentaDia = 0;
             if (isset($sales['Entregado'])) {
                 foreach ($sales['Entregado'] as $key => $sale) {
                     if ($idUser !== $sale->idUser) {
                         $total = 0;
-                        $arrayId = [$sale->id];
             ?>
                         <div class="lista__productos--pedido lista__productos--pedido-entregado">
                             <li>

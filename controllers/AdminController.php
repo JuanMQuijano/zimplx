@@ -24,11 +24,9 @@ class AdminController
         }
 
         //Consultar DB
-        $consulta = "SELECT sales.id, sales.date, CONCAT( users.name, ' ', users.lastname) as cliente, ";
+        $consulta = "SELECT sales.id, sales.date, sales.name as cliente, ";
         $consulta .= " sales.phone, sales.address, sales.idUser, sales.status, products.name as productos, products.price, sales.total_price  ";
         $consulta .= " FROM sales  ";
-        $consulta .= " LEFT OUTER JOIN users ";
-        $consulta .= " ON sales.idUser=users.id  ";
         $consulta .= " LEFT OUTER JOIN products ";
         $consulta .= " ON sales.idProduct_Car=products.id ";
         $consulta .= " WHERE date =  '{$fecha}' ";
@@ -89,11 +87,9 @@ class AdminController
         }
 
         //Consultar DB
-        $consulta = "SELECT sales.id, sales.date, CONCAT( users.name, ' ', users.lastname) as cliente, ";
+        $consulta = "SELECT sales.id, sales.date, sales.name as cliente, ";
         $consulta .= " sales.phone, sales.address, sales.idUser, sales.status, products.name as productos, products.price, sales.total_price  ";
         $consulta .= " FROM sales  ";
-        $consulta .= " LEFT OUTER JOIN users ";
-        $consulta .= " ON sales.idUser=users.id  ";
         $consulta .= " LEFT OUTER JOIN products ";
         $consulta .= " ON sales.idProduct_Car=products.id ";
         $consulta .= " WHERE date =  '{$fecha}' AND status = 'Entregado' ";

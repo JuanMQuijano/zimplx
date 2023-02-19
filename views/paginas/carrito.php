@@ -1,7 +1,6 @@
 <div class="contenedor carrito">
-    <?php if (isset($_SESSION['nombre'])) { ?>
-        <h1>Carrito de <?php echo $_SESSION['nombre']; ?></h1>
-    <?php } ?>
+
+    <h1>Tu Carrito</h1>
 
     <?php
     if ($mostrar) { ?>
@@ -20,16 +19,14 @@
                 foreach ($products_cart as $product_cart) {
                     $total += $product_cart->price;
                 ?>
-                    <tr class="tabla-carrito__tr" id="tr">                       
-                 
+                    <tr class="tabla-carrito__tr" id="tr">
+
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-
-        <input type="hidden" id="id" value="<?php echo $_SESSION['id']; ?>">
-        <input type="hidden" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
-        <input type="hidden" id="email" value="<?php echo $_SESSION['email']; ?>">
+                
+        <input type="hidden" id="id" value="<?php echo $id; ?>">
         <input type="hidden" id="total" value="<?php echo $total; ?>">
         <input type="hidden" id="precio_final" value="<?php echo $total ?>">
 

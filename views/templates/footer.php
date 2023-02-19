@@ -1,7 +1,7 @@
 <footer>
     <nav>
         <a href="/">
-            <h1>Zimple</h1>
+            <h1>Zimplx</h1>
         </a>
 
         <p>Todos los derechos reservados <?php echo Date('Y');?></p>

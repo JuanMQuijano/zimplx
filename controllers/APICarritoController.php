@@ -13,8 +13,6 @@ class APICarritoController
     {
         $id = $_GET['id'];
 
-        $id = filter_var($id, FILTER_VALIDATE_INT);
-
         if (!$id) header('Location: /carrito');
 
         $products_cart = ProductCart::select($id);
@@ -36,6 +34,19 @@ class APICarritoController
             $product->guardar();
 
             $resultado = $compra->guardar();
+
+            echo json_encode($resultado);
+        }
+    }
+
+    public static function add()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $cart = new Cart();
+            $cart->idProduct = $_POST['idProduct'];
+            $cart->idUser = $_POST['idUser'];            
+
+            $resultado = $cart->guardar();
 
             echo json_encode($resultado);
         }

@@ -4,8 +4,6 @@
 
   if (btnCompra) {
     const idUser = document.querySelector("#id").value;
-    const nombre = document.querySelector("#nombre").value;
-    const correo = document.querySelector("#email").value;
 
     const tbody = document.querySelector("#tbody");
     const precioFinal = document.querySelector("#total").value;
@@ -76,10 +74,10 @@
     }
 
     btnCompra.addEventListener("click", function () {
-      mostrarModal(nombre, correo, id);
+      mostrarModal(id);
     });
 
-    function mostrarModal(nombre, correo, id) {
+    function mostrarModal(id) {
       const modal = document.createElement("DIV");
       modal.classList.add("modal");
 
@@ -88,14 +86,10 @@
                     <legend>Finalizar Compra</legend>
         
                     <div class="campo">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" disabled name="nombre" id="nombre" value=${nombre}>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Tú Nombre" required>
                     </div>
-        
-                    <div class="campo">
-                        <label for="correo">Correo</label>
-                        <input type="email" disabled name="correo" id="correo" value=${correo}>
-                    </div>
+                           
         
                     <div class="campo">
                         <label for="phone">Teléfono</label>
@@ -136,6 +130,7 @@
         if (e.target.classList.contains("submit")) {
           const address = document.querySelector("#address").value;
           const phone = document.querySelector("#phone").value;
+          const name = document.querySelector("#name").value;
 
           if (address === "" || phone === "") {
             alert("Desbes Completar el Formulario");
@@ -148,7 +143,7 @@
             }
 
             arrayProductos.forEach((producto) => {
-              agregarCompraApi(producto, address, phoneN);
+              agregarCompraApi(producto, name, address, phoneN);
             });
 
             setTimeout(() => {
@@ -162,11 +157,12 @@
       document.body.appendChild(modal);
     }
 
-    async function agregarCompraApi(producto, address, phone) {
+    async function agregarCompraApi(producto, name, address, phone) {
       const { id, price } = producto;
 
       let datos = new FormData();
       datos.append("idUser", idUser);
+      datos.append("name", name);
       datos.append("idProduct_Car", id);
       datos.append("address", address);
       datos.append("phone", phone);

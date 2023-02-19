@@ -16,12 +16,10 @@
         <ul class="lista__productos">
             <?php
             $idUser = 0;
-            $arrayId = [];
             if (isset($sales['Espera'])) {
                 foreach ($sales['Espera'] as $key => $sale) {
                     if ($idUser !== $sale->idUser) {
                         $total = 0;
-                        $arrayId = [$sale->id];
             ?>
                         <div class="lista__productos--pedido">
                             <li>

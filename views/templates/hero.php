@@ -1,6 +1,6 @@
 <div class="hero">
     <div class="hero-content">
-        <h1 class="hero-content__txt hero-content__txt-h1">Zimple</h1>
+        <h1 class="hero-content__txt hero-content__txt-h1">Zimplx</h1>
         <p class="hero-content__txt hero-content__txt-p">Lo hacemos simple</p>
 
         <br>

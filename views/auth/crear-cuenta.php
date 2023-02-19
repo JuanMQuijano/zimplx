@@ -1,7 +1,7 @@
 <div class="contenedor login">
-    <h1>Zimple</h1>
+    <h1>Zimplx</h1>
     <div class="contenedor-sm">
-        <p>¡Hola! Vamos a crear tu cuenta en Zimple</p>
+        <p>¡Hola! Vamos a crear tu cuenta en Zimplx</p>
 
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 

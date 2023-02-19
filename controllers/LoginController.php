@@ -2,7 +2,6 @@
 
 namespace Controllers;
 
-use Classes\Email;
 use Model\User;
 use MVC\Router;
 
@@ -37,8 +36,8 @@ class LoginController
                         $_SESSION['id'] = $user->id;
                         $_SESSION['nombre'] = $user->name . " " . $user->lastname;
                         $_SESSION['email'] = $user->email;
-                        $_SESSION['login'] = true;
-
+                        $_SESSION['login'] = true;  
+                                           
                         if ($user->tipo === "1") {
                             $_SESSION['admin'] = true;
                             header('Location: /admin');

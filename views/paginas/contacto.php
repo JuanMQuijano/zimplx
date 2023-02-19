@@ -1,5 +1,5 @@
 <div class="contenedor login">
-    <h1>Zimple</h1>
+    <h1>Zimplx</h1>
     <div class="contenedor-sm">
         <p>¡Hola! Agradecemos tu mensaje, luchamos por mejorar día a día, te responderemos en la mayor brevedad posible. 💖</p>
 

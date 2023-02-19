@@ -35,13 +35,11 @@
                                 <hr>
                             <?php } else { ?>
                                 <h2>$<?php echo $product->price; ?></h2>
-                                <form method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                    <button type="submit" class="inicio__product-btn">
-                                        Agregar al Carrito
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                </form>
+
+                                <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
+                                    Agregar al Carrito
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             <?php } ?>
                         </div>
                 <?php }
@@ -74,13 +72,11 @@
                                 <hr>
                             <?php } else { ?>
                                 <h2>$<?php echo $product->price; ?></h2>
-                                <form method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                    <button type="submit" class="inicio__product-btn">
-                                        Agregar al Carrito
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                </form>
+
+                                <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
+                                    Agregar al Carrito
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             <?php } ?>
                         </div>
                 <?php }
@@ -114,13 +110,12 @@
                                 <hr>
                             <?php } else { ?>
                                 <h2>$<?php echo $product->price; ?></h2>
-                                <form method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                    <button type="submit" class="inicio__product-btn">
-                                        Agregar al Carrito
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                </form>
+
+                                <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
+                                    Agregar al Carrito
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+
                             <?php } ?>
                         </div>
                 <?php }
@@ -153,13 +148,11 @@
                                 <hr>
                             <?php } else { ?>
                                 <h2>$<?php echo $product->price; ?></h2>
-                                <form method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
-                                    <button type="submit" class="inicio__product-btn">
-                                        Agregar al Carrito
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                </form>
+
+                                <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
+                                    Agregar al Carrito
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             <?php } ?>
                         </div>
                 <?php }
@@ -170,4 +163,6 @@
         </div>
 
     </section>
+
+    <input type="hidden" value="<?php echo session_id(); ?>" id="idUser">
 </main>

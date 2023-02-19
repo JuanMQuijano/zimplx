@@ -10,56 +10,52 @@ use MVC\Router;
 
 class CarritoController
 {
+    // public static function store(Router $router)
+    // {
+    //     $products_format = [];
+    //     $products = Product::all();
 
-    public static function store(Router $router)
-    {
-        $products_format = [];
-        $products = Product::all();
+    //     foreach ($products as $product) {
+    //         if ($product->type === "cerveza") {
+    //             $products_format['cervezas'][] = $product;
+    //         }
+    //         if ($product->type === "aguardiente") {
+    //             $products_format['aguardiente'][] = $product;
+    //         }
+    //         if ($product->type === "ron") {
+    //             $products_format['ron'][] = $product;
+    //         }
+    //         if ($product->type === "smirnoff") {
+    //             $products_format['smirnoff'][] = $product;
+    //         }
+    //     }
+    //     $alertas = [];
 
-        foreach ($products as $product) {
-            if ($product->type === "cerveza") {
-                $products_format['cervezas'][] = $product;
-            }
-            if ($product->type === "aguardiente") {
-                $products_format['aguardiente'][] = $product;
-            }
-            if ($product->type === "ron") {
-                $products_format['ron'][] = $product;
-            }
-            if ($product->type === "smirnoff") {
-                $products_format['smirnoff'][] = $product;
-            }
-        }
-        $alertas = [];
 
-        if (!isset($_SESSION['nombre'])) {
-            $alertas = User::setAlerta('error', 'Debes iniciar sesión');
-        } else {
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $cart = new Cart;
-                $cart->idProduct = $_POST['id'];
-                $cart->idUser = $_SESSION['id'];
+    //     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //         $cart = new Cart;
+    //         $cart->idProduct = $_POST['id'];
+    //         $cart->idUser = session_id();
 
-                $resultado = $cart->guardar();
+    //         $resultado = $cart->guardar();
 
-                if ($resultado) {
-                    $alertas = Cart::setAlerta('exito', 'Producto Agregado al carrito');
-                }
-            }
-        }
+    //         if ($resultado) {
+    //             $alertas = Cart::setAlerta('exito', 'Producto Agregado al carrito');                
+    //         }
+    //     }
 
-        $alertas = Cart::getAlertas();
-        $router->render('index', [
-            'titulo' => 'Inicio',
-            'alertas' => $alertas,
-            'products' => $products_format
-        ]);
-    }
+    //     $alertas = Cart::getAlertas();
+    //     $router->render('index', [
+    //         'titulo' => 'Inicio',
+    //         'alertas' => $alertas,
+    //         'products' => $products_format
+    //     ]);
+    // }
 
     public static function limpiar()
     {
         $cart = new Cart;
-        $resultado = $cart->limpiar($_SESSION['id']);
+        $resultado = $cart->limpiar(session_id());
 
         if ($resultado) {
             header('Location: /carrito');
@@ -69,7 +65,7 @@ class CarritoController
     public static function eliminar()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            ProductCart::delete($_POST['idProduct'], $_SESSION['id']);
+            ProductCart::delete($_POST['idProduct'], session_id());
         }
 
         header('Location: /carrito');

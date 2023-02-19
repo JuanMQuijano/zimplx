@@ -7,10 +7,11 @@ use Model\ActiveRecord;
 class Sales extends ActiveRecord
 {
     protected static $tabla = "sales";
-    protected static $columnasDB = ["id", "idUser", "idProduct_Car", "address", "phone", "price", "total_price", "date", "status"];
+    protected static $columnasDB = ["id", "idUser", "name", "idProduct_Car", "address", "phone", "price", "total_price", "date", "status"];
 
     public $id;
     public $idUser;
+    public $name;
     public $idProduct_Car;
     public $address;
     public $phone;
@@ -23,12 +24,13 @@ class Sales extends ActiveRecord
     {
         $this->id = $args['id'] ?? null;
         $this->idUser = $args['idUser'] ?? '';
+        $this->name = $args['name'] ?? '';
         $this->idProduct_Car = $args['idProduct_Car'] ?? '';
         $this->address = $args['address'] ?? '';
         $this->phone = $args['phone'] ?? '';
         $this->price = $args['price'] ?? '';
         $this->total_price = $args['total_price'] ?? '';
         $this->date = Date('Y/m/d');
-        $this->status = $args['status'] ?? 'Espera';        
-    }    
+        $this->status = $args['status'] ?? 'Espera';
+    }
 }
