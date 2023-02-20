@@ -16,7 +16,7 @@ $router = new Router();
 
 //App
 $router->get('/', [PaginasController::class, 'index']);
-$router->post('/', [CarritoController::class, 'store']);
+// $router->post('/', [CarritoController::class, 'store']);
 
 $router->get('/contacto', [ContactoController::class, 'index']);
 $router->post('/contacto', [ContactoController::class, 'store']);
