@@ -13,6 +13,6 @@
 
         <br>
 
-        <p class="hero-content__txt hero-content__txt-p">Envios Gratis a partir de $75.000</p>
+        <p class="hero-content__txt hero-content__txt-p">Envios Gratis a partir de $80.000</p>
     </div>
 </div>

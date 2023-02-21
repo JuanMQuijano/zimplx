@@ -11,10 +11,10 @@
 <div class="campo">
     <label for="type">Tipo de Producto</label>
     <select name="type" id="type">
-        <option value="cerveza">Cerveza</option>
-        <option value="aguardiente">Aguardiente</option>
-        <option value="ron">Ron</option>
-        <option value="smirnoff">Smirnoff</option>
+        <option se value="cerveza" <?php echo $product->type === "cerveza" ? 'selected' : ''; ?>>Cerveza</option>
+        <option value="aguardiente" <?php echo $product->type === "aguardiente" ? 'selected' : ''; ?>>Aguardiente</option>
+        <option value="ron" <?php echo $product->type === "ron" ? 'selected' : ''; ?>>Ron</option>
+        <option value="smirnoff" <?php echo $product->type === "smirnoff" ? 'selected' : ''; ?>>Smirnoff</option>
     </select>
 </div>
 
