@@ -82,7 +82,7 @@
       modal.classList.add("modal");
 
       modal.innerHTML = `
-                <form class="modal__formulario" method="POST">
+                <form class="modal__formulario" method="POST" autocomplete="off">
                     <legend>Finalizar Compra</legend>
         
                     <div class="campo">
@@ -137,7 +137,7 @@
           } else {
             const phoneN = new String(phone);
 
-            if (phoneN.length < 10) {
+            if (phoneN.length < 7) {
               alert("Desbes Ingresar un número válido");
               return;
             }
