@@ -34,7 +34,7 @@
                                 <h1>Producto Agotado</h1>
                                 <hr>
                             <?php } else { ?>
-                                <h2>$<?php echo $product->price; ?></h2>
+                                <h2>$<?php echo number_format($product->price); ?></h2>
 
                                 <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
                                     Agregar al Carrito
@@ -71,7 +71,7 @@
                                 <h1>Producto Agotado</h1>
                                 <hr>
                             <?php } else { ?>
-                                <h2>$<?php echo $product->price; ?></h2>
+                                <h2>$<?php echo number_format($product->price); ?></h2>
 
                                 <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
                                     Agregar al Carrito
@@ -109,7 +109,7 @@
                                 <h1>Producto Agotado</h1>
                                 <hr>
                             <?php } else { ?>
-                                <h2>$<?php echo $product->price; ?></h2>
+                                <h2>$<?php echo number_format($product->price); ?></h2>
 
                                 <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
                                     Agregar al Carrito
@@ -147,7 +147,7 @@
                                 <h1>Producto Agotado</h1>
                                 <hr>
                             <?php } else { ?>
-                                <h2>$<?php echo $product->price; ?></h2>
+                                <h2>$<?php echo number_format($product->price); ?></h2>
 
                                 <button type="submit" class="inicio__product-btn" id="btnAgregar" value="<?php echo $product->id; ?>">
                                     Agregar al Carrito

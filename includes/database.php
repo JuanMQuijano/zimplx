@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('portafolio-juanquijano.online', 'u425383455_juan', 'Juanma20', 'u425383455_zimplx');
+$db = mysqli_connect('zimplx.com', 'u425383455_zimplx_deploy', 'Juanma20', 'u425383455_zimplx_deploy');
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
