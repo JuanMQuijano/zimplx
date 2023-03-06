@@ -92,7 +92,7 @@
                            
         
                     <div class="campo">
-                        <label for="phone">Teléfono</label>
+                        <label for="phone">Teléfono Celular</label>
                         <input type="tel" name="phone" id="phone" required min="10" placeholder="Tú Número de Teléfono">
                     </div>
 
@@ -137,7 +137,7 @@
           } else {
             const phoneN = new String(phone);
 
-            if (phoneN.length < 7) {
+            if (phoneN.length < 10) {
               alert("Desbes Ingresar un número válido");
               return;
             }
