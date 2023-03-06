@@ -31,7 +31,7 @@
         <input type="hidden" id="precio_final" value="<?php echo $total ?>">
 
         <div class="acciones-carrito">
-            <p id="total-parrafo"><span>Total a Pagar: </span>$<?php echo $total; ?></p>
+            <p id="total-parrafo"><span>Total a Pagar: </span>$<?php echo number_format($total); ?></p>
 
             <button class="acciones-carrito--comprar" id="btnCompra">Pagar
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
