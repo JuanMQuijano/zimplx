@@ -542,13 +542,13 @@ template {
   color: white;
   width: 40px;
 }
-.header__logout {
+.header__logout, .header__car {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 @media (min-width: 768px) {
-  .header__logout {
+  .header__logout, .header__car {
     background-color: red;
   }
 }
