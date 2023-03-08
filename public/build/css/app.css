@@ -543,6 +543,7 @@ template {
   width: 40px;
 }
 .header__logout {
+  background: red;
   display: flex;
   align-items: center;
   gap: 1rem;
