@@ -32,7 +32,7 @@
                 <a href="/#aguardiente">Aguardiente</a>
                 <a href="/#ron">Ron</a>
                 <a href="/#smirnoff">Smirnoff</a>
-                <a href="/carrito" class="header__logout" style="display:flex;">
+                <a href="/carrito" class="header__logout">
                     ¡Carrito!
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
