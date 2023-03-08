@@ -30,10 +30,14 @@
     width: 40px;
   }
 
-  &__logout {    
+  &__logout {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @include m.tablet {
+      background-color: red;
+    }
   }
 
   &__close {
