@@ -25,11 +25,15 @@
     }
   }
 
-  &__logout,
   &__close {
-    width: 40px;
-    width: 40px;
     color: white;
+    width: 40px;
+  }
+
+  &__logout {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__close {

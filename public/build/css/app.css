@@ -538,10 +538,14 @@ template {
 .header__formater a {
   color: white;
 }
-.header__logout, .header__close {
-  width: 40px;
-  width: 40px;
+.header__close {
   color: white;
+  width: 40px;
+}
+.header__logout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .header__close {
