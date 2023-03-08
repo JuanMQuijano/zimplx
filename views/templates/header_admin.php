@@ -33,6 +33,7 @@
                 <a href="/#ron">Ron</a>
                 <a href="/#smirnoff">Smirnoff</a>
                 <a href="/carrito" class="header__logout">
+                    ¡Carrito!
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             <?php } ?>
