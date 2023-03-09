@@ -548,11 +548,6 @@ template {
   gap: 1rem;
 }
 @media (min-width: 768px) {
-  .header__logout, .header__car {
-    background-color: red;
-  }
-}
-@media (min-width: 768px) {
   .header__close {
     display: none;
   }
