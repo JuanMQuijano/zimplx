@@ -545,7 +545,7 @@ template {
 .header__logout, .header__car {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 @media (min-width: 768px) {
   .header__close {
